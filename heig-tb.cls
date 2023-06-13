@@ -221,6 +221,7 @@
 \RequirePackage{expkv-cs}
 \RequirePackage[outputdir=build,chapter]{minted}
 \RequirePackage{pdfpages} % Ajout Personnel
+\RequirePackage{colortbl} % Ajout Personnel
 
 \RequirePackage[
   backref=true,
