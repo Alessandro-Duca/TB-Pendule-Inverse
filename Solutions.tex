@@ -1,16 +1,25 @@
 \section{Description de la structure}\label{sec:DescStruct}
-Avant de commencer à regarder les différentes solutions des points clés du projet il convient de se mettre d'acoord
+Avant de commencer à regarder les différentes solutions des points clés du projet il convient de se mettre d'accord
 sur la structure principale où tout sera attaché. Cette dernière est faîte en profilé Item \cite{Item} comme convenu dans le decriptif
-du projet. Afin de pouvoir le placer sur une table comme demandé, l'installation de pieds sera nécessaire. Les pieds proposé par Item ne
+du projet. Le choix de profilé se portera sur le profilé 8 40x40 naturel. Afin de pouvoir le placer sur une table comme demandé, l'installation de pieds sera nécessaire. Les pieds proposé par Item ne
 permettent pas une adhérence suffisante à la table et ne sont pas réglables. Elesa \cite{Elesa} possède une grande variété de pieds ce qui
 a permis de trouver exactement ce qui était recherché pour ce projet. La fabrication d'une pièce (plan dans les Annexes) pour pouvoir attacher
-les pieds au reste de la structure est donc nécessaire.
+les pieds au reste de la structure est donc nécessaire. Cette dernière aura un perçage taraudé M10 pour visser un pieds et un lamage M8 pour
+une vis six pans creux à tête cylindrique qui se fixe sur le côté taraudé des profilés. Voici à quoi ressemble la pièce en question.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.8\textwidth]{assets/figures/Structure.png}
-    \caption{Représentation de la structure en 3D}
-    \label{fig:DescStruct}
+  \centering
+  \includegraphics[width = 0.4\textwidth]{assets/figures/SupportPieds.png}
+  \caption{Représentation du support pour les pieds du système}
+  \label{fig:SupPieds}
+\end{figure}
+
+La structure complète avec les pieds et ses supports ressemble à ceci.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.8\textwidth]{assets/figures/Structure.png}
+  \caption{Représentation de la structure en 3D}
+  \label{fig:DescStruct}
 \end{figure}
 
 On peut voir que la structure utilise quatre grands profilés horizontaux, deux aux extrémités et deux au centre. Ce sera sur les deux profilés du centre que
@@ -26,43 +35,43 @@ Les points principaux sont: le moteur linéaire, le guidage et la mesure de posi
 Les offres suivantes ont été faites par des entreprises contactées lors de ce travail.
 
 \begin{table}[H]
-    \centering
-    \caption{Offres pour le moteur linéaire}
-    \label{tab:OffreMot}
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|l|l|l|l|l|}
-            \hline
-            Entreprise               & Prix                       & Délai de livraison              & Poids chariot          & Force continue \\ \hline
-            DD auto Tech             & 1105 CHF                   & \cellcolor{red}16 semaines      & 60g                    & 39N            \\ \hline
-            ESR Pollmeier            & -                          & \cellcolor{red}16 semaines      & \cellcolor{yellow}600g & 29N            \\ \hline
-            TDS Precision   Products & 1020 CHF                   & \cellcolor{yellow}8-10 semaines & 180g                   & 26.4N          \\ \hline
-            Heidenhain/Etel          & \cellcolor{yellow}3000 CHF & 7 semaines                      & 100g                   & 31.9N          \\ \hline
-        \end{tabular}%
-    }
+  \centering
+  \caption{Offres pour le moteur linéaire}
+  \label{tab:OffreMot}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      Entreprise                                         & Prix                       & Délai de livraison              & Poids chariot          & Force continue \\ \hline
+      DD auto Tech \cite{DDautoTech}                     & 1105 CHF                   & \cellcolor{red}16 semaines      & 60g                    & 39N            \\ \hline
+      ESR Pollmeier \cite{ESRPollmeier}                  & \cellcolor{red}-           & \cellcolor{red}16 semaines      & \cellcolor{yellow}600g & 29N            \\ \hline
+      TDS Precision Products \cite{TDSPrecisionProducts} & 1020 CHF                   & \cellcolor{yellow}8-10 semaines & 180g                   & 26.4N          \\ \hline
+      Heidenhain \cite{Heidenhain}/Etel \cite{Etel}      & \cellcolor{yellow}3000 CHF & 7 semaines                      & 100g                   & 31.9N          \\ \hline
+    \end{tabular}%
+  }
 \end{table}
 
 L'offre la plus intéressante est celle de TDS Precision avec un prix raisonnable et un temps de livraison un peu plus long mais qui rentre dans le planning.
 
 \subsubsection{B: Utiliser un rail magnétique déjà en stock}
 Un rail magnétique Etel de 1024mm de longueur est en stock à la HEIG et nécessiterait uniquement la commande de la partie mobile. Cependant ce
-rail est plus lourd et encombrant que certaines des solutions commandables. Cela reste un bon plan de secours en cas de problème d'approvisionement.
+rail est plus lourd et encombrant que certaines des solutions commandables. Cela reste un bon plan de secours en cas de problème d'approvisionnement.
 
 \subsection{Guidage linéaire}
 \subsubsection{A: Commander un guidage linéaire avec mesure de position intégré}
 Les offres suivantes ont été faites par des entreprises contactées lors de ce travail.
 
 \begin{table}[H]
-    \centering
-    \caption{Offres pour le guidage linéaire avec mesure de position}
-    \label{tab:OffreGuidPos}
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|l|l|l|l|l|}
-            \hline
-            Entreprise   & Prix                             & Délai de livraison & Longueur & Poids chariot                \\ \hline
-            Schneeberger & \cellcolor[HTML]{FF0000}1369 CHF & 4 semaines         & 995mm    & 84g                          \\ \hline
-            Hiwin        & \cellcolor[HTML]{FF0000}1171 CHF & 3 semaines         & 1100mm   & \cellcolor[HTML]{FF0000}420g \\ \hline
-        \end{tabular}%
-    }
+  \centering
+  \caption{Offres pour le guidage linéaire avec mesure de position}
+  \label{tab:OffreGuidPos}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      Entreprise                       & Prix                             & Délai de livraison & Longueur & Poids chariot                \\ \hline
+      Schneeberger \cite{Schneeberger} & \cellcolor[HTML]{FF0000}1369 CHF & 4 semaines         & 995mm    & 84g                          \\ \hline
+      Hiwin \cite{Hiwin}               & \cellcolor[HTML]{FF0000}1171 CHF & 3 semaines         & 1100mm   & \cellcolor[HTML]{FF0000}420g \\ \hline
+    \end{tabular}%
+  }
 \end{table}
 
 L'offre la plus intéressante est celle de Schneeberger avec un chariot beaucoup plus léger, cependant le prix est trop élevé pour pouvoir considérer cette solution.
@@ -73,17 +82,17 @@ L'offre la plus intéressante est celle de Schneeberger avec un chariot beaucoup
 Les offres suivantes ont été faites par des entreprises contactées lors de ce travail.
 
 \begin{table}[H]
-    \centering
-    \caption{Offres pour le capteur pour la mesure de position}
-    \label{tab:OffrePos}
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|l|l|l|l|l|}
-            \hline
-            Entreprise & Prix                             & Délai de livraison                  & Longueur                       & Poids tête                  \\ \hline
-            RLS        & \cellcolor[HTML]{FFFFFF}640 CHF  & \cellcolor[HTML]{FFFFFF}4 semaines  & \cellcolor[HTML]{FFFFFF}1000mm & 32g                         \\ \hline
-            Heidenhain & \cellcolor[HTML]{FFFF00}1080 CHF & \cellcolor[HTML]{FF0000}16 semaines & \cellcolor[HTML]{FFFFFF}1040mm & \cellcolor[HTML]{FFFFFF}20g \\ \hline
-        \end{tabular}%
-    }
+  \centering
+  \caption{Offres pour le capteur pour la mesure de position}
+  \label{tab:OffrePos}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      Entreprise                   & Prix                             & Délai de livraison                  & Longueur                       & Poids tête                  \\ \hline
+      RLS \cite{RLS}               & \cellcolor[HTML]{FFFFFF}640 CHF  & \cellcolor[HTML]{FFFFFF}4 semaines  & \cellcolor[HTML]{FFFFFF}1000mm & 32g                         \\ \hline
+      Heidenhain \cite{Heidenhain} & \cellcolor[HTML]{FFFF00}1080 CHF & \cellcolor[HTML]{FF0000}16 semaines & \cellcolor[HTML]{FFFFFF}1040mm & \cellcolor[HTML]{FFFFFF}20g \\ \hline
+    \end{tabular}%
+  }
 \end{table}
 
 \textbf{ - Guidage:}
@@ -91,19 +100,19 @@ Les offres suivantes ont été faites par des entreprises contactées lors de ce
 Les offres suivantes ont été faites par des entreprises contactées lors de ce travail.
 
 \begin{table}[H]
-    \centering
-    \caption{Offres pour le guidage}
-    \label{tab:OffreGuid}
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|l|l|l|l|l|}
-            \hline
-            Entreprise & Prix    & Délai de livraison & Longueur & Poids chariot                \\ \hline
-            Ewellix    & -       & -                  & 995mm    & \cellcolor[HTML]{FF0000}400g \\ \hline
-            Rollon     & -       & -                  & 1000mm   & 170g                         \\ \hline
-            Igus       & 130 CHF & 10 jours           & 1100mm   & \cellcolor[HTML]{FFFF00}260g \\ \hline
-            Igus       & 150 CHF & 2 jours            & 1100mm   & \cellcolor[HTML]{FFFFFF}110g \\ \hline
-        \end{tabular}%
-    }
+  \centering
+  \caption{Offres pour le guidage}
+  \label{tab:OffreGuid1}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      Entreprise             & Prix             & Délai de livraison & Longueur & Poids chariot                \\ \hline
+      Ewellix \cite{Ewellix} & \cellcolor{red}- & \cellcolor{red}-   & 995mm    & \cellcolor[HTML]{FF0000}400g \\ \hline
+      Rollon \cite{Rollon}   & \cellcolor{red}- & \cellcolor{red}-   & 1000mm   & 170g                         \\ \hline
+      Igus \cite{Igus}       & 130 CHF          & 10 jours           & 1100mm   & \cellcolor[HTML]{FFFF00}260g \\ \hline
+      Igus \cite{Igus}       & 150 CHF          & 2 jours            & 1100mm   & \cellcolor[HTML]{FFFFFF}110g \\ \hline
+    \end{tabular}%
+  }
 \end{table}
 
 Les deux offres choisies sont donc la règle linéaire de RLS et le second rail linéaire de Igus. Le poids minime du chariot Igus est un avantage considérable
@@ -119,28 +128,69 @@ est le support pour le ruban. Cette solution nécessite un temps de livraison in
 \newline
 
 \begin{table}[H]
-    \centering
-    \caption{Offres pour le guidage}
-    \label{tab:OffreGuid}
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|l|l|l|l|l|}
-            \hline
-            Entreprise & Prix    & Délai de livraison & Longueur & Poids chariot                \\ \hline
-            Ewellix    & -       & -                  & 995mm    & \cellcolor[HTML]{FF0000}400g \\ \hline
-            Rollon     & -       & -                  & 1000mm   & 170g                         \\ \hline
-            Igus       & 130 CHF & 10 jours           & 1100mm   & \cellcolor[HTML]{FFFF00}260g \\ \hline
-            Igus       & 150 CHF & 2 jours            & 1100mm   & \cellcolor[HTML]{FFFFFF}110g \\ \hline
-        \end{tabular}%
-    }
+  \centering
+  \caption{Offres pour le guidage}
+  \label{tab:OffreGuid2}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      Entreprise             & Prix             & Délai de livraison & Longueur & Poids chariot                \\ \hline
+      Ewellix \cite{Ewellix} & \cellcolor{red}- & \cellcolor{red}-   & 995mm    & \cellcolor[HTML]{FF0000}400g \\ \hline
+      Rollon \cite{Rollon}   & \cellcolor{red}- & \cellcolor{red}-   & 1000mm   & 170g                         \\ \hline
+      Igus \cite{Igus}       & 130 CHF          & 10 jours           & 1100mm   & \cellcolor[HTML]{FFFF00}260g \\ \hline
+      Igus \cite{Igus}       & 150 CHF          & 2 jours            & 1100mm   & \cellcolor[HTML]{FFFFFF}110g \\ \hline
+    \end{tabular}%
+  }
 \end{table}
 
 Cette solution utilisera la règle linéaire de chez Heidenhain en stock et le second rail Igus grâce au poids minime de son chariot.
 
 \section{Solutions choisies}\label{sec:SolChoix}
 
-La solution choisie pour le moteur linéaire est la solution A, c'est à dire la commande d'un nouveau moteur chez TDS Precision. Ce dernier
+La solution choisie pour le moteur linéaire est la solution A, c'est à dire la commande d'un nouveau moteur chez TDS Precision \cite{TDSPrecisionProducts}. Ce dernier
 sera fixé à l'arrière de la structure sur un des profilé du centre.\\
 
-La solution choisie pour le guidage linéaire est la solution C, c'est à dire la commande d'un guidage linéaire chez Igus et l'utilisation d'une
-règle linéaire de chez Heidenhain appartenant déjà à la HEIG. Le rail peut être fixé sur la partie avant des profilés et la règle linéaire peut
-être placée sur la partie arrière du deuxième profilé.
+La solution choisie pour le guidage linéaire est la solution C, c'est à dire la commande d'un guidage linéaire chez Igus \cite{Igus} et l'utilisation d'une
+règle linéaire de chez Heidenhain \cite{Heidenhain} appartenant déjà à la HEIG. Le rail peut être fixé sur la partie avant des profilés et la règle linéaire peut
+être placée sur la partie arrière du deuxième profilé. La datasheet de ces composants se trouvent dans les Annexes de ce document. Le résultat du placement de ces
+éléments peut être observé sur les figures suivante.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{assets/figures/VueFace.png}
+  \caption{Représentation de la structure en 3D de face avec l'ajout des éléments des solutions}
+  \label{fig:VueFace}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{assets/figures/VueDerriere.png}
+  \caption{Représentation de la structure en 3D de derrière avec l'ajout des éléments des solutions}
+  \label{fig:VueDerriere}
+\end{figure}
+
+Maintenant que les éléments sont en place, il faut les lier ensemble avec des pièces faîtes sur mesure. Toutes les pièces sont faîtes
+d'aluminium EN-AW 6082. la liaison entre le chariot du guidage et le glider du moteur va se faire en deux pièces vissées ensemble. La pièce
+connectée au chariot devra accueilir deux roulements qui servent à fair tourner la partie qui tient la tige du pendule. Une zone pour placer
+un anneau de LEDs est aussi nécessaire afin de pouvoir illuminer la tige. Enfin, cette pièce devra aussi accueilir l'encodeur pour la position
+angulaire. La fixation sur le chariot se fait avec quatre vis M5 ce qui nécessitera donc des lamages. La fixation sur l'autre pièce se fait sur
+le dessous de la pièce avec quatres taraudages M5. Un rebord pour l'indexage avec l'autre pièce est aussi présent. On obtient la pièce suivante.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.4\textwidth]{assets/figures/LiaisonChariot.png}
+  \caption{Représentation de la pièce de liaison du chariot}
+  \label{fig:LiaisonChariot}
+\end{figure}
+
+La seconde pièce devra évidemment se lier avec la première mais aussi avec le moteur. La première pièce ayant les taraudages, celle-ci aura quatre
+lamages M5. Pour la fixation au moteur, quatre lamages M3 suffiront. Deux autres éléments viennent encore se fixer sur cette pièce: le support de
+la tête de lecture pour la règle linéaire et la chaine porte câble. Pour le support de tête de lecture, trois taraudages M4 sont placés sur un côté
+alors que deux trous taraudés sont utilisés pour fixer la chaine porte câble. Finalement, voilà à quoi ressemble la pièce.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.4\textwidth]{assets/figures/LiaisonMoteur.png}
+  \caption{Représentation de la pièce de liaison du moteur}
+  \label{fig:LiaisonMoteur}
+\end{figure}
