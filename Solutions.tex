@@ -169,28 +169,22 @@ règle linéaire de chez Heidenhain \cite{Heidenhain} appartenant déjà à la H
   \label{fig:VueDerriere}
 \end{figure}
 
-Maintenant que les éléments sont en place, il faut les lier ensemble avec des pièces faîtes sur mesure. Toutes les pièces sont faîtes
-d'aluminium EN-AW 6082. la liaison entre le chariot du guidage et le glider du moteur va se faire en deux pièces vissées ensemble. La pièce
-connectée au chariot devra accueilir deux roulements qui servent à fair tourner la partie qui tient la tige du pendule. Une zone pour placer
-un anneau de LEDs est aussi nécessaire afin de pouvoir illuminer la tige. Enfin, cette pièce devra aussi accueilir l'encodeur pour la position
-angulaire. La fixation sur le chariot se fait avec quatre vis M5 ce qui nécessitera donc des lamages. La fixation sur l'autre pièce se fait sur
-le dessous de la pièce avec quatres taraudages M5. Un rebord pour l'indexage avec l'autre pièce est aussi présent. On obtient la pièce suivante.
+\section{Autres éléments}\label{sec:AutreEle}
+D'autres éléments sont encore nécessaires au bon fonctionnement de système.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width = 0.4\textwidth]{assets/figures/LiaisonChariot.png}
-  \caption{Représentation de la pièce de liaison du chariot}
-  \label{fig:LiaisonChariot}
-\end{figure}
+\subsection{Capteurs de fins de course}
+Des capteurs de fins de course sont importants non seulement pour détecter le chariot lorsqu'il s'approche d'un bord mais aussi
+pour faire la mise à zéro au démarrage du système. Dans le cadre de ce projet des capteurs de proximité à contact Reed ont été choisis.
+Le choix s'est porté sur le capteur SME-8M-ZS-24V-K-2,5-OE de Festo \cite{Festo}.
 
-La seconde pièce devra évidemment se lier avec la première mais aussi avec le moteur. La première pièce ayant les taraudages, celle-ci aura quatre
-lamages M5. Pour la fixation au moteur, quatre lamages M3 suffiront. Deux autres éléments viennent encore se fixer sur cette pièce: le support de
-la tête de lecture pour la règle linéaire et la chaine porte câble. Pour le support de tête de lecture, trois taraudages M4 sont placés sur un côté
-alors que deux trous taraudés sont utilisés pour fixer la chaine porte câble. Finalement, voilà à quoi ressemble la pièce.
+\subsection{Amortisseurs}
+Il y a aussi besoin d'amortisseurs en bout de course au cas où le chariot arriverait trop vite pour s'arrêter. Des amortisseurs RB1007 taille M10
+de Festo \cite{Festo} ont été choisis à cette fin.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width = 0.4\textwidth]{assets/figures/LiaisonMoteur.png}
-  \caption{Représentation de la pièce de liaison du moteur}
-  \label{fig:LiaisonMoteur}
-\end{figure}
+\subsection{Chaîne porte câble}
+Une chaîne porte câble pour guider les câbles qui doivent bouger avec le système. Igus \cite{Igus} possède une grande variété de choix dans
+ce domaine là. Le choix s'est porté sur la chaîne System E2 mini Série 14 d'une longueur de 1220~mm avec des éléments de fixations.
+
+\subsection{Encodeur de position angulaire}
+L'encodeur de position angulaire permet de déterminer l'angle auquel se trouve la tige. Le stock de la \acrshort{Heig} possède déjà un encodeur
+utilisable, il s'agit de l'encodeur TMCS-20 de Trinamic \cite{Trinamic}.
