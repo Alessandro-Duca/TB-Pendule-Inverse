@@ -3,7 +3,8 @@ Avant de commencer à regarder les différentes solutions des points clés du pr
 sur la structure principale où tout sera attaché. Cette dernière est faîte en profilé Item \cite{Item} comme convenu dans le decriptif
 du projet. Le choix de profilé se portera sur le profilé 8 40x40 naturel. Afin de pouvoir le placer sur une table comme demandé, l'installation de pieds sera nécessaire. Les pieds proposé par Item ne
 permettent pas une adhérence suffisante à la table et ne sont pas réglables. Elesa \cite{Elesa} possède une grande variété de pieds ce qui
-a permis de trouver exactement ce qui était recherché pour ce projet. La fabrication d'une pièce (plan dans les Annexes) pour pouvoir attacher
+a permis de trouver exactement ce qui était recherché pour ce projet. Le pied GN 6311.6-KR possède un revêtement antiglisse, une rotule entre le pied
+et la vis et une vis sans tête M10. Ceci étaient les critères principaux pour le choix des pieds. La fabrication d'une pièce (plan dans les Annexes) pour pouvoir attacher
 les pieds au reste de la structure est donc nécessaire. Cette dernière aura un perçage taraudé M10 pour visser un pieds et un lamage M8 pour
 une vis six pans creux à tête cylindrique qui se fixe sur le côté taraudé des profilés. Voici à quoi ressemble la pièce en question.
 
@@ -28,7 +29,10 @@ en cachant les éléments arrière et à la fois rendre la structure plus rigide
 
 \section{Catalogue de solutions}\label{sec:CatSol}
 Maintenant que la structure est connue, il est possible d'étudier les différentes solutions sur les points clés du projet.
-Les points principaux sont: le moteur linéaire, le guidage et la mesure de position linéaire.
+Les points principaux sont: le moteur linéaire, le guidage et la mesure de position linéaire.\\
+
+Les cases en rouge indiquent que la valeur n'est pas acceptable alors que les cases en jaune indiquent des valeurs élevées mais pouvant être
+acceptées s'il n'y a pas de meilleur offre.
 
 \subsection{Moteur linéaire}
 \subsubsection{A: Commander un moteur linéaire}
@@ -41,11 +45,11 @@ Les offres suivantes ont été faites par des entreprises contactées lors de ce
   \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|l|l|l|l|}
       \hline
-      Entreprise                                         & Prix                       & Délai de livraison              & Poids chariot          & Force continue \\ \hline
-      DD auto Tech \cite{DDautoTech}                     & 1105 CHF                   & \cellcolor{red}16 semaines      & 60g                    & 39N            \\ \hline
-      ESR Pollmeier \cite{ESRPollmeier}                  & \cellcolor{red}-           & \cellcolor{red}16 semaines      & \cellcolor{yellow}600g & 29N            \\ \hline
-      TDS Precision Products \cite{TDSPrecisionProducts} & 1020 CHF                   & \cellcolor{yellow}8-10 semaines & 180g                   & 26.4N          \\ \hline
-      Heidenhain \cite{Heidenhain}/Etel \cite{Etel}      & \cellcolor{yellow}3000 CHF & 7 semaines                      & 100g                   & 31.9N          \\ \hline
+      Entreprise                                         & Prix                       & Délai de livraison              & Poids chariot        & Force continue \\ \hline
+      DD auto Tech \cite{DDautoTech}                     & 1105 CHF                   & \cellcolor{red}16 semaines      & 60~g                 & 39~N           \\ \hline
+      ESR Pollmeier \cite{ESRPollmeier}                  & \cellcolor{red}-           & \cellcolor{red}16 semaines      & \cellcolor{red}600~g & 29~N           \\ \hline
+      TDS Precision Products \cite{TDSPrecisionProducts} & 1020 CHF                   & \cellcolor{yellow}8-10 semaines & 180~g                & 26.4~N         \\ \hline
+      Heidenhain \cite{Heidenhain}/Etel \cite{Etel}      & \cellcolor{yellow}3000 CHF & 7 semaines                      & 100~g                & 31.9~N         \\ \hline
     \end{tabular}%
   }
 \end{table}
@@ -53,7 +57,7 @@ Les offres suivantes ont été faites par des entreprises contactées lors de ce
 L'offre la plus intéressante est celle de TDS Precision avec un prix raisonnable et un temps de livraison un peu plus long mais qui rentre dans le planning.
 
 \subsubsection{B: Utiliser un rail magnétique déjà en stock}
-Un rail magnétique Etel de 1024mm de longueur est en stock à la HEIG et nécessiterait uniquement la commande de la partie mobile. Cependant ce
+Un rail magnétique Etel de 1024~mm de longueur est en stock à la HEIG et nécessiterait uniquement la commande de la partie mobile. Cependant ce
 rail est plus lourd et encombrant que certaines des solutions commandables. Cela reste un bon plan de secours en cas de problème d'approvisionnement.
 
 \subsection{Guidage linéaire}
@@ -67,9 +71,9 @@ Les offres suivantes ont été faites par des entreprises contactées lors de ce
   \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|l|l|l|l|}
       \hline
-      Entreprise                       & Prix                             & Délai de livraison & Longueur & Poids chariot                \\ \hline
-      Schneeberger \cite{Schneeberger} & \cellcolor[HTML]{FF0000}1369 CHF & 4 semaines         & 995mm    & 84g                          \\ \hline
-      Hiwin \cite{Hiwin}               & \cellcolor[HTML]{FF0000}1171 CHF & 3 semaines         & 1100mm   & \cellcolor[HTML]{FF0000}420g \\ \hline
+      Entreprise                       & Prix                             & Délai de livraison & Longueur & Poids chariot                 \\ \hline
+      Schneeberger \cite{Schneeberger} & \cellcolor[HTML]{FF0000}1369 CHF & 4 semaines         & 995~mm   & 84~g                          \\ \hline
+      Hiwin \cite{Hiwin}               & \cellcolor[HTML]{FF0000}1171 CHF & 3 semaines         & 1100~mm  & \cellcolor[HTML]{FF0000}420~g \\ \hline
     \end{tabular}%
   }
 \end{table}
@@ -88,9 +92,9 @@ Les offres suivantes ont été faites par des entreprises contactées lors de ce
   \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|l|l|l|l|}
       \hline
-      Entreprise                   & Prix                             & Délai de livraison                  & Longueur                       & Poids tête                  \\ \hline
-      RLS \cite{RLS}               & \cellcolor[HTML]{FFFFFF}640 CHF  & \cellcolor[HTML]{FFFFFF}4 semaines  & \cellcolor[HTML]{FFFFFF}1000mm & 32g                         \\ \hline
-      Heidenhain \cite{Heidenhain} & \cellcolor[HTML]{FFFF00}1080 CHF & \cellcolor[HTML]{FF0000}16 semaines & \cellcolor[HTML]{FFFFFF}1040mm & \cellcolor[HTML]{FFFFFF}20g \\ \hline
+      Entreprise                   & Prix                             & Délai de livraison                  & Longueur                        & Poids tête                   \\ \hline
+      RLS \cite{RLS}               & \cellcolor[HTML]{FFFFFF}640 CHF  & \cellcolor[HTML]{FFFFFF}4 semaines  & \cellcolor[HTML]{FFFFFF}1000~mm & 32~g                         \\ \hline
+      Heidenhain \cite{Heidenhain} & \cellcolor[HTML]{FFFF00}1080 CHF & \cellcolor[HTML]{FF0000}16 semaines & \cellcolor[HTML]{FFFFFF}1040~mm & \cellcolor[HTML]{FFFFFF}20~g \\ \hline
     \end{tabular}%
   }
 \end{table}
@@ -106,11 +110,11 @@ Les offres suivantes ont été faites par des entreprises contactées lors de ce
   \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|l|l|l|l|}
       \hline
-      Entreprise             & Prix             & Délai de livraison & Longueur & Poids chariot                \\ \hline
-      Ewellix \cite{Ewellix} & \cellcolor{red}- & \cellcolor{red}-   & 995mm    & \cellcolor[HTML]{FF0000}400g \\ \hline
-      Rollon \cite{Rollon}   & \cellcolor{red}- & \cellcolor{red}-   & 1000mm   & 170g                         \\ \hline
-      Igus \cite{Igus}       & 130 CHF          & 10 jours           & 1100mm   & \cellcolor[HTML]{FFFF00}260g \\ \hline
-      Igus \cite{Igus}       & 150 CHF          & 2 jours            & 1100mm   & \cellcolor[HTML]{FFFFFF}110g \\ \hline
+      Entreprise             & Prix             & Délai de livraison & Longueur & Poids chariot                 \\ \hline
+      Ewellix \cite{Ewellix} & \cellcolor{red}- & \cellcolor{red}-   & 995~mm   & \cellcolor[HTML]{FF0000}400~g \\ \hline
+      Rollon \cite{Rollon}   & \cellcolor{red}- & \cellcolor{red}-   & 1000~mm  & 170~g                         \\ \hline
+      Igus \cite{Igus}       & 130 CHF          & 10 jours           & 1100~mm  & \cellcolor[HTML]{FFFF00}260~g \\ \hline
+      Igus \cite{Igus}       & 150 CHF          & 2 jours            & 1100~mm  & \cellcolor[HTML]{FFFFFF}110~g \\ \hline
     \end{tabular}%
   }
 \end{table}
@@ -134,11 +138,11 @@ est le support pour le ruban. Cette solution nécessite un temps de livraison in
   \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|l|l|l|l|}
       \hline
-      Entreprise             & Prix             & Délai de livraison & Longueur & Poids chariot                \\ \hline
-      Ewellix \cite{Ewellix} & \cellcolor{red}- & \cellcolor{red}-   & 995mm    & \cellcolor[HTML]{FF0000}400g \\ \hline
-      Rollon \cite{Rollon}   & \cellcolor{red}- & \cellcolor{red}-   & 1000mm   & 170g                         \\ \hline
-      Igus \cite{Igus}       & 130 CHF          & 10 jours           & 1100mm   & \cellcolor[HTML]{FFFF00}260g \\ \hline
-      Igus \cite{Igus}       & 150 CHF          & 2 jours            & 1100mm   & \cellcolor[HTML]{FFFFFF}110g \\ \hline
+      Entreprise             & Prix             & Délai de livraison & Longueur & Poids chariot                 \\ \hline
+      Ewellix \cite{Ewellix} & \cellcolor{red}- & \cellcolor{red}-   & 995~mm   & \cellcolor[HTML]{FF0000}400~g \\ \hline
+      Rollon \cite{Rollon}   & \cellcolor{red}- & \cellcolor{red}-   & 1000~mm  & 170~g                         \\ \hline
+      Igus \cite{Igus}       & 130 CHF          & 10 jours           & 1100~mm  & \cellcolor[HTML]{FFFF00}260~g \\ \hline
+      Igus \cite{Igus}       & 150 CHF          & 2 jours            & 1100~mm  & \cellcolor[HTML]{FFFFFF}110~g \\ \hline
     \end{tabular}%
   }
 \end{table}
@@ -170,7 +174,7 @@ règle linéaire de chez Heidenhain \cite{Heidenhain} appartenant déjà à la H
 \end{figure}
 
 \section{Autres éléments}\label{sec:AutreEle}
-D'autres éléments sont encore nécessaires au bon fonctionnement de système.
+D'autres éléments sont encore nécessaires au bon fonctionnement du système.
 
 \subsection{Capteurs de fins de course}
 Des capteurs de fins de course sont importants non seulement pour détecter le chariot lorsqu'il s'approche d'un bord mais aussi
