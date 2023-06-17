@@ -4,32 +4,32 @@ Les calculs suivant sont nécessaire à la prise de décision pour les solutions
 On retrouve dans le tableau suivant les valeurs constantes que l'on connaît au préalable et qui seront utilisées dans les calculs.
 
 \begin{table}[H]
-  \centering
-  \caption{Valeurs utilisées pour les calculs}
-  \label{tab:ValUtil}
-  \begin{tabular}{|l|l|l|l|}
-    \hline
-    Donnée                      & Lettre & Valeur & Unité   \\ \hline
-    Accélération max du chariot & a      & 30     & $m/s^2$ \\ \hline
-    Vitesse max du chariot      & v      & 5      & $m/s$   \\ \hline
-    Course du chariot           & l      & 1      & $m$     \\ \hline
-  \end{tabular}%
+    \centering
+    \caption{Valeurs utilisées pour les calculs}
+    \label{tab:ValUtil}
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        \textbf{Donnée}             & \textbf{Lettre} & \textbf{Valeur} & \textbf{Unité} \\ \hline
+        Accélération max du chariot & a               & 30              & $m/s^2$        \\ \hline
+        Vitesse max du chariot      & v               & 5               & $m/s$          \\ \hline
+        Course du chariot           & l               & 1               & $m$            \\ \hline
+    \end{tabular}%
 \end{table}
 
 On estime la masse totale qui bouge à l'aide des approximations suivantes:
 \begin{itemize}
-  \item Tige en polycarbonate de 10~mm de diamètre: $\sim$50~g
-  \item Glider moteur linéaire: $\sim$200~g
-  \item Chariot du guidage linéaire: $\sim$100~g
-  \item Resolver: $\sim$100~g
-  \item Pièces créées en aluminium: $\sim$250-400~g
+    \item Tige en polycarbonate de 10~mm de diamètre: $\sim$50~g
+    \item Glider moteur linéaire: $\sim$200~g
+    \item Chariot du guidage linéaire: $\sim$100~g
+    \item Resolver: $\sim$100~g
+    \item Pièces créées en aluminium: $\sim$250-400~g
 \end{itemize}
 
 On aura donc une masse totale m en mouvement pouvant aller de 700 à 850~g. La valeur maximale sera utilisée pour déterminer la force maximale F
 que le moteur doit appliquer pour atteindre l'accélération voulue en utilisant la formule suivante:
 
 \begin{equation}\label{eq:ForceMot}
-  F = m \cdot a = 0.85 \cdot 30 = 25.5~N
+    F = m \cdot a = 0.85 \cdot 30 = 25.5~N
 \end{equation}
 
 Le moteur choisi devra appliquer une force d'au moins 25.5N pour pouvoir obtenir l'accélération recherchée sur le pendule.\\
@@ -38,13 +38,13 @@ On peut aussi vérifier que la course du moteur est suffisante pour atteindre la
 moitié de la course car il faut décélérer sur la deuxième moitié afin d'éviter les impacts. On obtient donc les formules suivantes:
 
 \begin{align}\label{eq:TempsMouv}
-  \begin{split}
-    x(t) = \frac{l}{2} = \frac{1}{2} \cdot a \cdot t^2 + v_0 \cdot t + x_0 \; avec \; v_0 = 0 \; et \; x_0 = 0 \\ \Rightarrow t = \sqrt{\frac{2 \cdot l}{2 \cdot a}} = \sqrt{\frac{2 \cdot 1}{2 \cdot 30}} = 183~ms
-  \end{split}
+    \begin{split}
+        x(t) = \frac{l}{2} = \frac{1}{2} \cdot a \cdot t^2 + v_0 \cdot t + x_0 \; avec \; v_0 = 0 \; et \; x_0 = 0 \\ \Rightarrow t = \sqrt{\frac{2 \cdot l}{2 \cdot a}} = \sqrt{\frac{2 \cdot 1}{2 \cdot 30}} = 183~ms
+    \end{split}
 \end{align}
 
 \begin{equation}
-  v(t) = a \cdot t + v_0 = 30 \cdot 0.183 + 0 = 5.48~m/s
+    v(t) = a \cdot t + v_0 = 30 \cdot 0.183 + 0 = 5.48~m/s
 \end{equation}
 
 La valeur de vitesse maximale est bien atteignable avec cette course pour le chariot.
