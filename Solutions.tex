@@ -10,7 +10,7 @@ une vis six pans creux à tête cylindrique qui se fixe sur le côté taraudé d
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 0.4\textwidth]{assets/figures/SupportPieds.png}
+  \includegraphics[width = 0.4\textwidth]{assets/figures/SupportPieds.svg}
   \caption{Représentation du support pour les pieds du système}
   \label{fig:SupPieds}
 \end{figure}
@@ -18,12 +18,12 @@ une vis six pans creux à tête cylindrique qui se fixe sur le côté taraudé d
 La structure complète avec les pieds et ses supports ressemble à ceci.
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 0.8\textwidth]{assets/figures/Structure.png}
+  \includegraphics[width = 0.8\textwidth]{assets/figures/Structure.svg}
   \caption{Représentation de la structure en 3D}
   \label{fig:DescStruct}
 \end{figure}
 
-On peut voir que la structure utilise quatre grands profilés horizontaux, deux aux extrémités et deux au centre. Ce sera sur les deux profilés du centre que
+On peut voir que la structure utilise quatre grands profilés horizontaux de 1120~mm de long, deux aux extrémités et deux au centre. Ce sera sur les deux profilés du centre que
 les éléments du pendule pourront venir se fixer plus tard. Deux plaques sont mises entre des profilés pour à la fois rendre le projet présentable
 en cachant les éléments arrière et à la fois rendre la structure plus rigide.
 
@@ -156,19 +156,19 @@ sera fixé à l'arrière de la structure sur un des profilés du centre.\\
 
 La solution choisie pour le guidage linéaire est la solution C, c'est à dire la commande d'un guidage linéaire chez Igus \cite{Igus} et l'utilisation d'une
 règle linéaire de chez Heidenhain \cite{Heidenhain} appartenant déjà à la \acrshort{Heig}. Le rail peut être fixé sur la partie avant des profilés et la règle linéaire peut
-être placée sur la partie arrière du deuxième profilé. La datasheet de ces composants se trouvent dans les Annexes de ce document. Le résultat du placement de ces
+être placée sur la partie arrière du deuxième profilé. La \textit{datasheet} de ces composants se trouvent dans les annexes de ce document. Le résultat du placement de ces
 éléments peut être observé sur les figures suivante.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{assets/figures/VueFace.png}
+  \includegraphics[width = \textwidth]{assets/figures/VueFace.svg}
   \caption{Représentation de la structure en 3D de face avec l'ajout des éléments des solutions}
   \label{fig:VueFace}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{assets/figures/VueDerriere.png}
+  \includegraphics[width = \textwidth]{assets/figures/VueDerriere.svg}
   \caption{Représentation de la structure en 3D de derrière avec l'ajout des éléments des solutions}
   \label{fig:VueDerriere}
 \end{figure}
@@ -182,8 +182,9 @@ pour faire la mise à zéro au démarrage du système. Dans le cadre de ce proje
 Le choix s'est porté sur le capteur SME-8M-ZS-24V-K-2,5-OE de Festo \cite{Festo}.
 
 \subsection{Amortisseurs}
-Il y a aussi besoin d'amortisseurs en bout de course au cas où le chariot arriverait trop vite pour s'arrêter. Des amortisseurs RB1007 taille M10
-de SMC \cite{SMC} ont été choisis à cette fin.
+Il y a aussi besoin d'amortisseurs en bout de course au cas où le chariot arriverait trop vite pour s'arrêter. Les facteurs clés pour le choix
+de ces pièces sont la vitesse maximale qu'elles peuvent amortir et la quantité d'énergie absorbable. Des amortisseurs RB1007 taille M10
+de SMC \cite{SMC} ont été choisis à cette fin car ils peuvent tenir une vitesse d'impact de 5~m/s.
 
 \subsection{Chaîne porte-câbles}
 Une chaîne porte-câbles pour guider les câbles qui doivent bouger avec le système. Igus \cite{Igus} possède une grande variété de choix dans
@@ -191,4 +192,5 @@ ce domaine-là. Le choix s'est porté sur la chaîne System E2 mini Série 14 d'
 
 \subsection{Encodeur de position angulaire}
 L'encodeur de position angulaire permet de déterminer l'angle auquel se trouve la tige. Le stock de la \acrshort{Heig} possède déjà un encodeur
-utilisable, il s'agit de l'encodeur TMCS-20 de Trinamic \cite{Trinamic}.
+utilisable, il s'agit de l'encodeur TMCS-20 de Trinamic \cite{Trinamic}. Il possède une résolution de 32768 incréments ce qui est capital car
+plus la résolution sur l'angle de la tige est bonne plus la régulation du système sera facile.

@@ -2,6 +2,8 @@ Les calculs suivant sont nécessaire à la prise de décision pour les solutions
 
 \section{Valeurs utilisées}\label{sec:ValUtil}
 On retrouve dans le tableau suivant les valeurs constantes que l'on connaît au préalable et qui seront utilisées dans les calculs.
+On approxime une valeur d'accélération maximale voulue de 30~$m/s^2$ et une vitesse maximale de 5~m/s pour une course d'environ 1~m.
+Ces valeurs pourront être ajustées si jamais les calculs montrent qu'elles ne sont pas atteignables.
 
 \begin{table}[H]
     \centering
@@ -16,23 +18,24 @@ On retrouve dans le tableau suivant les valeurs constantes que l'on connaît au 
     \end{tabular}%
 \end{table}
 
-On estime la masse totale qui bouge à l'aide des approximations suivantes:
+On estime la masse totale qui bouge à l'aide des approximations suivantes en prennant les éléments mentionnés dans le chapitre \ref{sec:PartMob}:
 \begin{itemize}
     \item Tige en polycarbonate de 10~mm de diamètre: $\sim$50~g
     \item Glider moteur linéaire: $\sim$200~g
     \item Chariot du guidage linéaire: $\sim$100~g
     \item Resolver: $\sim$100~g
-    \item Pièces créées en aluminium: $\sim$250-400~g
+    \item Tête de lecture encodeur linéaire: $\sim$70~g
+    \item Pièces créées en aluminium: $\sim$250-350~g
 \end{itemize}
 
-On aura donc une masse totale m en mouvement pouvant aller de 700 à 850~g. La valeur maximale sera utilisée pour déterminer la force maximale F
+On aura donc une masse totale m en mouvement pouvant aller de 770 à 870~g. La valeur maximale sera utilisée pour déterminer la force maximale F
 que le moteur doit appliquer pour atteindre l'accélération voulue en utilisant la formule suivante:
 
 \begin{equation}\label{eq:ForceMot}
-    F = m \cdot a = 0.85 \cdot 30 = 25.5~N
+    F = m \cdot a = 0.87 \cdot 30 = 26.1~N
 \end{equation}
 
-Le moteur choisi devra appliquer une force d'au moins 25.5~N pour pouvoir obtenir l'accélération recherchée sur le pendule.\\
+Le moteur choisi devra appliquer une force d'au moins 26.1~N pour pouvoir obtenir l'accélération recherchée sur le pendule.\\
 
 On peut aussi vérifier que la course du moteur est suffisante pour atteindre la vitesse maximale du système. On ne peut accélérer que sur la
 moitié de la course, car il faut décélérer sur la deuxième moitié afin d'éviter les impacts. On obtient donc les formules suivantes:
