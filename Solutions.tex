@@ -1,12 +1,12 @@
 \section{Description de la structure}\label{sec:DescStruct}
 Avant de commencer à regarder les différentes solutions des points clés du projet il convient de se mettre d'accord
-sur la structure principale où tout sera attaché. Cette dernière est faite en profilé Item \cite{Item} comme convenu dans le descriptif
-du projet. Le choix de profilé se portera sur le profilé 8 40x40 naturel. Afin de pouvoir le placer sur une table comme demandé, l'installation de pieds sera nécessaire. Les pieds proposé par Item ne
+sur la structure principale sur laquelle tout sera attaché. Cette dernière est faite en profilé Item \cite{Item} comme convenu dans le descriptif
+du projet. Le choix de profilé se portera sur le profilé 8 40x40~mm naturel. Afin de pouvoir le placer sur une table comme demandé, l'installation de pieds sera nécessaire. Les pieds proposé par Item ne
 permettent pas une adhérence suffisante à la table et ne sont pas réglables. Elesa \cite{Elesa} possède une grande variété de pieds ce qui
 a permis de trouver exactement ce qui était recherché pour ce projet. Le pied GN 6311.6-KR possède une rotule entre le pied
 et la vis, un revêtement antiglisse et une vis sans tête M10. Ceux-ci étaient les critères principaux pour le choix des pieds. La fabrication d'une pièce (plan dans les Annexes) pour pouvoir attacher
 les pieds au reste de la structure est donc nécessaire. Cette dernière aura un perçage taraudé M10 pour visser un pied et un lamage M8 pour
-une vis six pans creux à tête cylindrique qui se fixe sur le côté taraudé des profilés. Voici à quoi ressemble la pièce en question.
+une vis six pans creux à tête cylindrique qui se fixe sur le côté taraudé des profilés. La pièce en question est illustrée ci-dessous.
 
 \begin{figure}[H]
   \centering
@@ -15,7 +15,7 @@ une vis six pans creux à tête cylindrique qui se fixe sur le côté taraudé d
   \label{fig:SupPieds}
 \end{figure}
 
-La structure complète avec les pieds et ses supports ressemble à ceci.
+La structure complète avec les pieds et ses supports est représentée ci-dessous.
 \begin{figure}[H]
   \centering
   \includegraphics[width = 0.8\textwidth]{assets/figures/Structure.svg}
@@ -31,7 +31,7 @@ en cachant les éléments arrière et à la fois rendre la structure plus rigide
 Maintenant que la structure est connue, il est possible d'étudier les différentes solutions sur les points clés du projet.
 Les points principaux sont: le moteur linéaire, le guidage et la mesure de position linéaire.\\
 
-Les cases en rouge indiquent que la valeur n'est pas acceptable alors que les cases en jaune indiquent des valeurs élevées, mais pouvant être
+Dans les tableaux suivants, un code couleur est employé. Les cases en rouge indiquent que la valeur n'est pas acceptable alors que les cases en jaune indiquent des valeurs élevées, mais pouvant être
 acceptées s'il n'y a pas de meilleur offre.
 
 \subsection{Moteur linéaire}
@@ -46,10 +46,10 @@ Les offres suivantes ont été faites par des entreprises contactées lors de ce
     \begin{tabular}{|l|l|l|l|l|}
       \hline
       \textbf{Entreprise}                                & \textbf{Prix}              & \textbf{Délai de livraison}     & \textbf{Poids chariot} & \textbf{Force continue} \\ \hline
-      DD auto Tech \cite{DDautoTech}                     & 1105 CHF                   & \cellcolor{red}16 semaines      & 60~g                   & 39~N                    \\ \hline
+      DD auto Tech \cite{DDautoTech}                     & 1105~CHF                   & \cellcolor{red}16 semaines      & 60~g                   & 39~N                    \\ \hline
       ESR Pollmeier \cite{ESRPollmeier}                  & \cellcolor{red}-           & \cellcolor{red}16 semaines      & \cellcolor{red}600~g   & 29~N                    \\ \hline
-      TDS Precision Products \cite{TDSPrecisionProducts} & 1020 CHF                   & \cellcolor{yellow}8-10 semaines & 180~g                  & 26.4~N                  \\ \hline
-      Heidenhain \cite{Heidenhain}/Etel \cite{Etel}      & \cellcolor{yellow}3000 CHF & 7 semaines                      & 100~g                  & 31.9~N                  \\ \hline
+      TDS Precision Products \cite{TDSPrecisionProducts} & 1020~CHF                   & \cellcolor{yellow}8-10 semaines & 180~g                  & 26.4~N                  \\ \hline
+      Heidenhain \cite{Heidenhain}/Etel \cite{Etel}      & \cellcolor{yellow}3000~CHF & 7 semaines                      & 100~g                  & 31.9~N                  \\ \hline
     \end{tabular}%
   }
 \end{table}
@@ -58,7 +58,7 @@ L'offre la plus intéressante est celle de TDS Precision \cite{TDSPrecisionProdu
 
 \subsubsection{B: Utiliser un rail magnétique déjà en stock}
 Un rail magnétique Etel \cite{Etel} de 1024~mm de longueur est en stock à la \acrshort{Heig} et nécessiterait uniquement la commande de la partie mobile. Cependant, ce
-rail est plus lourd et encombrant que certaines des solutions commandables. Cela reste un bon plan de secours en cas de problème d'approvisionnement.
+rail est plus lourd et encombrant que certaines des solutions commandables. Cela reste un plan de secours envisageable en cas de problème d'approvisionnement.
 
 \subsection{Guidage linéaire}
 \subsubsection{A: Commander un guidage linéaire avec mesure de position intégré}
@@ -184,15 +184,16 @@ et possède une résistance en dessous du Ohm lorsqu'un aimant se trouve devant.
 permet de se fixer en se collant.
 
 \subsection{Amortisseurs}
-Il y a aussi besoin d'amortisseurs en bout de course au cas où le chariot arriverait trop vite pour s'arrêter. Les facteurs clés pour le choix
+Il est aussi nécessaire d'utiliser des amortisseurs en bout de course dans le cas où le chariot arriverait trop vite pour s'arrêter. Les facteurs clés pour le choix
 de ces pièces sont la vitesse maximale qu'elles peuvent amortir et la quantité d'énergie absorbable. Des amortisseurs RB1007 taille M10
-de SMC \cite{SMC} ont été choisis à cette fin car ils peuvent tenir une vitesse d'impact de 5~m/s.
+de SMC \cite{SMC} ont été choisis à cette fin car ils peuvent tenir une vitesse d'impact de 5~m/s ce qui est la vitesse maximale que le système
+peut atteindre.
 
 \subsection{Chaîne porte-câbles}
-Une chaîne porte-câbles pour guider les câbles qui doivent bouger avec le système. Igus \cite{Igus} possède une grande variété de choix dans
+Une chaîne porte-câbles pour guider les câbles qui doivent bouger avec le système est nécessaire. Igus \cite{Igus} possède une grande variété de choix dans
 ce domaine-là. Le choix s'est porté sur la chaîne System E2 mini Série 14 d'une longueur de 1220~mm avec des éléments de fixations.
 
 \subsection{Encodeur de position angulaire}
-L'encodeur de position angulaire permet de déterminer l'angle auquel se trouve la tige. Le stock de la \acrshort{Heig} possède déjà un encodeur
+Un encodeur de position angulaire permet de déterminer l'angle auquel se trouve la tige. Le stock de la \acrshort{Heig} possède déjà un encodeur
 utilisable, il s'agit de l'encodeur TMCS-20 de Trinamic \cite{Trinamic}. Il possède une résolution de 32768 incréments ce qui est capital car
 plus la résolution sur l'angle de la tige est bonne plus la régulation du système sera facile.
