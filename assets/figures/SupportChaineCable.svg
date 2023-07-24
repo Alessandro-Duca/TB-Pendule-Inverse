@@ -26,7 +26,7 @@
      showgrid="false"
      inkscape:zoom="1.4503087"
      inkscape:cx="372.67928"
-     inkscape:cy="234.0881"
+     inkscape:cy="234.7776"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -122,4 +122,68 @@
        id="tspan341"
        x="511.61523"
        y="251.67058">40</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000"
+     x="65.503296"
+     y="259.25516"
+     id="text856"><tspan
+       sodipodi:role="line"
+       id="tspan854"
+       x="65.503296"
+       y="259.25516">Fixation chaîne</tspan><tspan
+       sodipodi:role="line"
+       x="65.503296"
+       y="274.25516"
+       id="tspan1634">porte câble</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000"
+     x="280.62991"
+     y="346.13321"
+     id="text1638"><tspan
+       sodipodi:role="line"
+       id="tspan1636"
+       x="280.62991"
+       y="346.13321">Fixation profilé</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000"
+     x="470.24469"
+     y="39.991489"
+     id="text2368"><tspan
+       sodipodi:role="line"
+       id="tspan2366"
+       x="470.24469"
+       y="39.991489">Passage de câble</tspan></text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 68.261329,248.22302 136.52266,164.10299"
+     id="path3195"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 218.57416,206.85251 -149.623322,40.681"
+     id="path3197"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 366.81846,155.82889 274.42433,330.27451"
+     id="path3199"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 370.95551,257.87613 275.11384,329.585"
+     id="path3201"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 466.79717,43.439028 333.03255,83.430514"
+     id="path3203"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
 </svg>
