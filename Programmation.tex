@@ -1,0 +1,74 @@
+Un compte github a été créé pour le pendule afin de pouvoir sauvegarder les fichiers en cas de problème. Les identifiants de ce compte et
+des autres comptes liés à ce projet sont donnés dans le fichier texte "Comptes.txt" qui ne se trouve pas en annexe de ce document pour des
+raisons de sécurité. Le fichier peut être trouvé dans la documentation rendue en annexe par fichier zip ou directement dans le dossier document
+sur la carte RaspberryPi du pendule.
+
+\section{Bouton marche/arrêt}
+Un bouton lumineux permettant d'éteindre et d'allumer le système est présent sur le boîtier. Ce dernier est connecté sur la carte RaspberryPi comme
+indiqué dans la figure \ref{fig:SchemaElec}. Deux fichiers sont utilisés pour gérer ce bouton: "listen-for-shutdown.sh" et "listen-for-shutdown.py".
+Ces fichiers proviennent de l'exemple trouvé sur internet pour l'ajout d'un bouton sur la carte RaspberryPi \cite{ButtonAdd}. Le fichier qui se
+termine par ".sh" est un fichier \textit{shell script}, un fichier exécutable sous Linux. Ce fichier s'occupe de lancer et arrêter le
+fichier qui se termine par ".py". Ce fichier est codé en python et met le pin GPIO3 en entrée et attend un flanc descendant pour arrêter la
+carte RaspberryPi. Le pin GPIO3 est spécial car c'est celui qui est capable de réveiller la carte lorsqu'il reçoit un flanc descendant.\\
+
+La méthode utilisée dans le tutoriel pour que le fichier "listen-for-shutdown.sh" se lance à l'allumage du système ne fonctionne pas. Un autre
+tutoriel visant à lancer un programme au démarrage \cite{ScriptStartup} à permis au code de se lancer correctement après allumage. Cette méthode
+utilise un fichier crontab qui va exécuter le fichier se finissant par ".sh" à intervalle régulier.\\
+
+Le bouton possède aussi une LED qui permet de savoir l'état du système. Un tutoriel sur internet \cite{LEDAdd} indique comment ajouter une LED
+sur la RaspberryPi. Plusieurs méthodes sont mentionnées mais celle utilisée consiste à brancher l'anode de la LED sur le pin de sortie de la
+communication UART. La trame UART étant définie comme à l'état logique 1 tant qu'il n'y a pas de message la LED reste allumée. Cette méthode
+est simpliste mais la communication UART n'est pas utilisée lors de ce projet et ceci permet d'avoir un indicateur correct pour pouvoir couper
+l'alimentation de la carte RaspberryPi étant donné que la LED ne s'éteind que lorsque la carte est complètement à l'arrêt. La cathode, elle,
+est connectée sur un pin GND.
+
+\section{Initialisation EPOS4}
+Le contrôleur EPOS4 peut se brancher sur un ordinateur personnel avec un connecteur micro USB afin d'effectuer des tests. Pour cela, un logiciel
+appelé EPOS Studio qui est téléchargeable sur le site Maxon\cite{Maxon} est utilisé. Il permet de modifier les registres dans les contrôleurs EPOS
+afin de les régler pour le type de moteur qui sera contrôlé comme illustré ci-dessous.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{assets/figures/Registres.png}
+    \caption{Registres de l'EPOS4}
+    \label{fig:Registres}
+\end{figure}
+
+\subsection{Démarrage}
+Pour aider avec la gestion des registres des \textit{wizards} sont mis à disposition. Le premier s'appelle \textit{Startup wizard}, il permet
+de configurer les paramètres de notre moteur et des capteurs du système. Une image du \textit{wizard} est donnée ci-après. La configuration
+complète est présente dans l'annexe "ConfigurationWizards.docx" dans le dossier du projet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{assets/figures/StartupWizard.png}
+    \caption{Fenêtre de réglage des paramètres du moteur et des capteurs}
+    \label{fig:StartWizard}
+\end{figure}
+
+Cependant, un problème est présent lors de la configuration des capteurs. La description du problème et la démarche qui devra être suivie pendant
+le mois d'août pour le résoudre sont spécifiés au chapitre \ref{sec:ProbCapt}. Ce problème empêche de pouvoir contrôler le moteur et donc de
+pouvoir communiquer en CANopen avec.\\
+
+\subsection{Régulation}
+Le second \textit{wizard} s'appelle \textit{"Regulation Tuning"} et permet d'ajuster les paramètres de régulation du système. L'illustration
+suivante montre à quoi ressemble la fenêtre.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{assets/figures/RegulationTuning.png}
+    \caption{Fenêtre de réglage pour la régulation d'un moteur}
+    \label{fig:RegTune}
+\end{figure}
+
+Etant donné que les capteurs ne peuvent pas être utilisés dans cette configuration, le seul test utilisable sur cet onglet pour l'instant
+est la régulation de courant. Il suffit de cliquer sur \textit{"Auto-tune"} pour que le système trouve les valeurs du régulateur de courant.\\
+
+\subsection{CANopen}
+
+\subsection{Export de paramètres}
+
+\section{Communication CAN}
+
+\section{Régulation}
+
