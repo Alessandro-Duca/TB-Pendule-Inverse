@@ -1,19 +1,20 @@
 % Résumé du projet
 Ce projet porte sur la fabrication et la programmation d'un pendule inverse. Celui-ci doit être assemblé en suivant des directives précises.
 Tout d'abord, la structure principale doit être faite de profilés en aluminium. Ensuite, un moteur linéaire sans coeur en fer est utilisé pour
-entrainer le système avec le moins de frottements possible. Un contrôleur moteur dirigé par communication \gls{CAN} avec une carte RaspberryPi doivent être
-utilisés pour faire fonctionner le moteur. Enfin, la tige du pendule doit être illuminée par des leds.\\
+entrainer le système avec le moins de frottements possible. Un contrôleur moteur et une carte RaspberryPi qui le dirige par communication \gls{CAN}
+doivent être utilisés pour faire fonctionner le moteur. Enfin, la tige du pendule doit être illuminée par des leds.\\
 
-La programmation, elle, sera faite à l'aide de boucles de régulations \gls{PID}. Ces dernières permettront de maintenir la tige du pendule
+La programmation, quant à elle, sera faite à l'aide de boucles de régulations \gls{PID}. Ces dernières permettront de maintenir la tige du pendule
 en équilibre instable ainsi qu'au centre de la structure.\\
 
 Le travail à fournir pendant la durée de ce travail de Bachelor comporte plusieurs étapes clés. Tout d'abord, le développement de la structure
-en profilé et la création de l'entraînement mécanique du système avec guidage. Ensuite, il faut mettre en place la mesure de position linéaire
-du pendule ainsi que de la position angulaire de la tige. Il faut aussi créer un boîtier d'alimentation électrique permettant au système de
-fonctionner avec une prise 230~V classique. Une fois l'assemblage complet bien défini, il faut passer à la commande et l'assemblage des
-différentes pièces nécessaire du système. Pour finir, il reste la programmation des boucles de régulations du pendule.\\
+en profilé et la création de l'entraînement mécanique du système avec guidage. Ensuite, la mise en place de la mesure de position linéaire
+du pendule ainsi que de la position angulaire de la tige. La création d'un boîtier d'alimentation électrique permettant au système de
+fonctionner avec une prise 230~V classique est aussi nécessaires. Une fois l'assemblage complet bien défini, les étapes suivantes sont la commande
+et l'assemblage des différentes pièces nécessaire du système. Enfin, la dernière étape consiste en la programmation des boucles de régulations du
+pendule.\\
 
 Le développement, l'assemblage, le câblage et la mise en tension du système ont été effectués lors du projet. La communication CAN entre la carte
 RaspberryPi et le contrôleur n'a pas pu être effectuée. De plus, lors de tests effectués en connectant directement le contrôleur à un ordinateur,
-des problèmes sont devenus apparents. La résolution de ces problèmes et l'établissement d'une communication \gls{CAN} seront les objectifs du mois
-d'août.
+des problèmes sont devenus apparents. La résolution de ces problèmes et l'établissement d'une communication \gls{CAN} seront les objectifs à
+accomplir pendant le mois d'août.
