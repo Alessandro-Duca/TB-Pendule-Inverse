@@ -9,9 +9,9 @@ pour correctement s'appuyer sur le profilé et le rail rentre dans la rainure lo
     \label{fig:FixRailMagProb}
 \end{figure}
 
-La solution apportée à ce problème est l'utilisation de plaques de fixations placées entre le rail et le profilé. Ceci va permettre de répartir
+La solution apportée à ce problème est l'utilisation de plaques de fixations placées entre le rail et le profilé. Ceci permet de répartir
 la charge de chaque côté de la rainure et d'empêcher le rail de pencher en rentrant dans la rainure. Les représentations des deux plaques créées
-sont illustrées ci-dessous.
+sont illustrées aux figures \ref{fig:PlaqueFix1} et \ref{fig:PlaqueFix2}.
 
 \begin{figure}[H]
     \centering
@@ -36,8 +36,8 @@ La figure suivante illustre la solution appliquée et comment elle résout le pr
     \label{fig:FixRailMagSol}
 \end{figure}
 
-Cependant, cette modification éloigne le rail magnétique de 2~mm du chariot. Il faut donc modifier la pièce de liaison au moteur pour la ralonger
-de 2~mm aussi. Le support de la tête de lecture de la règle linéaire est aussi décalée afin de maintenir la position de la tête de lecture.
+Cependant, cette modification éloigne le rail magnétique de 2~mm du chariot. Il faut donc modifier la pièce de liaison au moteur pour la rallonger
+de 2~mm aussi. Le support de la tête de lecture de la règle linéaire est aussi décalé afin de maintenir la position de la tête de lecture.
 
 \section{Jeu dans le guidage linéaire}\label{sec:JeuGuidage}
 En faisant des déplacements à la main sur le moteur on se rend compte que le mouvement n'est pas aussi fluide que voulu. La raison de ce mouvement
@@ -56,19 +56,19 @@ augmente la force d'appui ce qui va augmenter à son tour la force de frottement
 
 La solution la plus simple à ce problème est de graisser le rail afin de réduire les frottements. Cette solution permet d'obtenir un mouvement
 fluide mais ne répond pas aux autres problèmes éventuels que ce jeu pourrait engendrer comme par exemple une lecture de position linéaire
-erronnée dû à la précision nécessaire entre la position de la tête de lecture et la règle de mesure.\\
+erronée dû à la précision nécessaire entre la position de la tête de lecture et la règle de mesure.\\
 
-La deuxième solution serait d'utiliser un autre rail avec une précontrainte ce qui éliminerait le jeu. Parmis les rails proposés dans le
+La deuxième solution serait d'utiliser un autre rail avec une précontrainte ce qui éliminerait le jeu. Parmi les rails proposés dans le
 chapitre \ref{sec:CatSol}, le rail de chez Hiwin \cite{Hiwin} utilise des billes et peut être précontraint. Il possède même une mesure de
 position intégrée ce qui faciliterait et augmenterait la précision de la mesure de position.\\
 
-Dans le cas de ce projet, l'acquisition d'un nouveau rail n'est pas envisageable par manque de temps. L'option du lubrifiant sera utilisé pour
+Dans le cas de ce projet, l'acquisition d'un nouveau rail n'est pas envisageable par manque de temps. L'option du lubrifiant sera utilisée pour
 essayer de faire déplacer le pendule pendant la période d'août.
 
 \section{Support chaîne porte-câbles}\label{sec:ProbChaine}
 En montant la chaîne sur son support on s'aperçoit très vite que le support n'est pas suffisant et que la chaîne descend de 15~cm au plus bas.
 La solution à ce problème est d'ajouter un autre support sur la course de la chaîne. Le rail d'aimants du moteur linéaire possède des taraudages
-M5 sur le dessous. Le support peut donc être imprimé en 3D pour venir se fixer en dessous du rail magnétique et venir supporter la châine porte-câbles.
+M5 sur le dessous. Le support peut donc être imprimé en 3D pour venir se fixer en dessous du rail magnétique et venir supporter la chaîne porte-câbles.
 L'image suivante illustre la solution.
 
 \begin{figure}[H]
@@ -80,14 +80,14 @@ L'image suivante illustre la solution.
 \end{figure}
 
 \section{Combinaison de capteur non valide}\label{sec:ProbCapt}
-Lors du paramètrage de l'EPOS4 pour le moteur et les capteurs, la combinaison de capteurs utilisée pour le projet n'a pas été acceptée comme
+Lors du paramétrage de l'EPOS4 pour le moteur et les capteurs, la combinaison de capteurs utilisée pour le projet n'a pas été acceptée comme
 valide pour faire fonctionner le contrôleur. En effet comme on peut le voir sur le tableau ci-dessous extrait de la \textit{datasheet} du contrôleur, un
-capteur incrémental digital et un capteur incrémental analogique ne sont pas suffisant pour pouvoir utiliser la carte.
+capteur incrémental digital et un capteur incrémental analogique ne sont pas suffisants pour pouvoir utiliser la carte.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.7\textwidth]{assets/figures/TableauCapteur.png}
-    \caption{Extrait de la \textit{datasheet} de l'EPOS4 sur les combinaisons de capteurs utilisable}
+    \caption{Extrait de la \textit{datasheet} de l'EPOS4 sur les combinaisons de capteurs utilisables}
     \label{fig:TableauCapteur}
 \end{figure}
 

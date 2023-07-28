@@ -13,13 +13,13 @@ carte RaspberryPi. Le pin GPIO3 est spécial car c'est celui qui est capable de 
 
 La méthode utilisée dans le tutoriel pour que le fichier "listen-for-shutdown.sh" se lance à l'allumage du système ne fonctionne pas. Un autre
 tutoriel visant à lancer un programme au démarrage \cite{ScriptStartup} à permis au code de se lancer correctement après allumage. Cette méthode
-utilise un fichier crontab qui va exécuter le fichier se finissant par ".sh" à intervalle régulier.\\
+utilise un fichier crontab qui va exécuter le fichier se finissant par ".sh" à intervalles réguliers.\\
 
 Le bouton possède aussi une LED qui permet de savoir l'état du système. Un tutoriel sur internet \cite{LEDAdd} indique comment ajouter une LED
 sur la RaspberryPi. Plusieurs méthodes sont mentionnées mais celle utilisée consiste à brancher l'anode de la LED sur le pin de sortie de la
 communication UART. La trame UART étant définie comme à l'état logique 1 tant qu'il n'y a pas de message la LED reste allumée. Cette méthode
 est simpliste mais la communication UART n'est pas utilisée lors de ce projet et ceci permet d'avoir un indicateur correct pour pouvoir couper
-l'alimentation de la carte RaspberryPi étant donné que la LED ne s'éteind que lorsque la carte est complètement à l'arrêt. La cathode, elle,
+l'alimentation de la carte RaspberryPi étant donné que la LED ne s'éteint que lorsque la carte est complètement à l'arrêt. La cathode, elle,
 est connectée sur un pin GND.
 
 \section{Initialisation EPOS4}\label{sec:InitEPOS4}
@@ -29,26 +29,29 @@ afin de les régler pour le type de moteur qui sera contrôlé comme illustré c
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.8\textwidth]{assets/figures/Registres.png}
+    \includegraphics[width = \textwidth]{assets/figures/Registres.png}
     \caption{Registres de l'EPOS4}
     \label{fig:Registres}
 \end{figure}
 
 \subsection{Démarrage}\label{subsec:Demarrage}
 Pour aider avec la gestion des registres des \textit{\gls{wizard}} sont mis à disposition. Plusieurs tutoriels vidéo fait par Maxon \cite{TutoMaxon}
-sont disponible. Le premier s'appelle \textit{Startup wizard}, il permet de configurer les paramètres de notre moteur et des capteurs du système.
-Une image du \textit{\gls{wizard}} est donnée ci-après. La configuration complète est présente dans l'annexe "ConfigurationWizards.docx" dans le
-dossier du projet.
+sont disponibles. Le premier s'appelle \textit{Startup wizard}, il permet de configurer les paramètres de notre moteur et des capteurs du système.
+Le contrôleur EPOS4 ne possède pas d'option pour les moteurs linéaires, il faut donc tout convertir en un moteur triphasé rotatif classique.
+Le moteur possède 6 bobines montées en parallèle ce qui donne 3 paires de phases et le nombre de paires de pôles choisi pour être équivalent à
+une rotation est de 2 ce qui est équivalent à un déplacement de 60~mm. Avec ces choix, les limites logiciels peuvent être placées en faisant les
+conversions des paramètres linéaires en paramètre rotatifs équivalents. Une image du \textit{\gls{wizard}} est donnée ci-après. La configuration
+complète est présente dans l'annexe D.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.8\textwidth]{assets/figures/StartupWizard.png}
+    \includegraphics[width = \textwidth]{assets/figures/StartupWizard.png}
     \caption{Fenêtre de réglage des paramètres du moteur et des capteurs}
     \label{fig:StartWizard}
 \end{figure}
 
-Cependant, un problème est présent lors de la configuration des capteurs. La description du problème et la démarche qui devra être suivie pendant
-le mois d'août pour le résoudre sont spécifiés au chapitre \ref{sec:ProbCapt}. Ceci renvoie une erreur sur le contrôleur et empêche de pouvoir
+Cependant, un problème est présent lors de la configuration des capteurs car il manque un capteur à effet Hall. La description du problème et la
+démarche qui devra être suivie pendant le mois d'août pour le résoudre sont spécifiées au chapitre \ref{sec:ProbCapt}. Ceci renvoie une erreur sur le contrôleur et empêche de pouvoir
 contrôler le moteur et donc de pouvoir communiquer en CANopen avec.\\
 
 \subsection{Régulation}\label{subsec:InitRegul}
@@ -57,23 +60,26 @@ suivante montre à quoi ressemble la fenêtre.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.8\textwidth]{assets/figures/RegulationTuning.png}
+    \includegraphics[width = \textwidth]{assets/figures/RegulationTuning.png}
     \caption{Fenêtre de réglage pour la régulation d'un moteur}
     \label{fig:RegTune}
 \end{figure}
 
 Etant donné que les capteurs ne peuvent pas être utilisés dans cette configuration, le seul test utilisable sur cet onglet pour l'instant
-est la régulation de courant. Il suffit de cliquer sur \textit{"Auto-tune"} pour que le système trouve les valeurs du régulateur de courant.\\
+est la régulation de courant. Il suffit de cliquer sur \textit{"Auto-tune"} pour que le système trouve les valeurs optimales du régulateur de
+courant.\\
 
 \subsection{CANopen}
-Le \textit{\gls{wizard}} suivant porte sur la communication CANopen. Deux manières principale existent pour communiquer en CANopen, la SDO et la PDO.
+Le \textit{\gls{wizard}} suivant porte sur la communication CANopen. Deux manières principales existent pour communiquer en CANopen, la SDO et la PDO.
 Dans le cas de ce projet ce sera la PDO qui sera utilisée car elle permet de définir en avance quels registres seront utilisés. Le \textit{\gls{wizard}}
-permet de créer un \textit{mapping} pour les registres que l'on veut lire ou écrire en PDO. L'image qui suit illustre une des pages de paramètrage de la
-communication CANopen en PDO.
+permet de créer un \textit{mapping} pour les registres que l'on veut lire ou écrire en PDO. Les paramètres à lire et écrire n'ont pas encore été définis car l'aspect communication n'a pas encore pu être entamé.
+Ils seront définis lorsque la communication sera établie durant le mois d'août mais il est déjà possible de connaître certains registres utilisés.
+La position, la vitesse et l'accélération mesurées par les deux capteurs incrémentaux seront certainement lues et la valeur de position ou de vitesse
+à atteindre sera certainement écrite. L'image qui suit illustre une des pages de paramétrage de la communication CANopen en PDO.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.8\textwidth]{assets/figures/ParamCANopen.png}
+    \includegraphics[width = \textwidth]{assets/figures/ParamCANopen.png}
     \caption{Fenêtre de réglage pour la communication CANopen de l'EPOS4}
     \label{fig:ParamCAN}
 \end{figure}
@@ -92,7 +98,8 @@ CANopen avec le contrôleur moteur. La fenêtre suivante apparaît lorsque l'ass
     \label{fig:ParamExport}
 \end{figure}
 
-Une fois le fichier exporté, il faut le placer sur la RaspberryPi à l'aide de github.
+Une fois le fichier exporté, il faut le placer sur la RaspberryPi à l'aide de github ce qui permettra de configurer la communication CANopen sur
+la carte RaspberryPi.
 
 \section{Communication CANopen}
 Comme précisé au chapitre \ref{subsec:Demarrage}, la communication ne peut pas être établie car le contrôleur renvoie une erreur par manque d'un
@@ -102,10 +109,10 @@ pour l'établissement de la communication pendant le mois d'août. Les notions d
 La première étape est l'installation de la librairie "canopen" sur la carte RaspberryPi. Les étapes suivantes sont la création d'un fichier .py et
 l'import de la librairie dans le fichier. Un bus de donnée CAN possède un \textit{network} qui doit être créé et connecté à un port de communication
 can. Chaque \textit{network} peut contenir un ou plusieurs \textit{nodes} qui représente les appareils avec lesquels la carte communique. Dans le cas
-du pendule un seul \textit{node} à besoin d'être ajouter sur le \textit{network}, celui du contrôleur EPOS4.\\
+du pendule un seul \textit{node} à besoin d'être ajouté sur le \textit{network}, celui du contrôleur EPOS4.\\
 
-Le type de communication utilisée sera en principe du \acrshort{PDO} ce qui implique de devoir créer un \textit{mapping} des registres du
-dictionnaire d'objets que la carte voudra lire ou écrire. La demande d'envoi de donnée peut se faire avec l'envoi d'une trame de donnée vide
+Le type de communication utilisée sera en principe du \acrlong{PDO} (PDO) ce qui implique de devoir créer un \textit{mapping} des registres du
+dictionnaire d'objets que la carte voudra lire ou écrire. La demande d'envoi de données peut se faire avec l'envoi d'une trame de données vide
 et un flag actif indiquant que l'on veut lire des données sur l'appareil.\\
 
 Finalement, le protocole \acrshort{NMT} permet de changer l'état des appareils qui sont commandés afin de pouvoir les allumer ou les éteindre
@@ -114,24 +121,24 @@ quand c'est nécessaire. Il est aussi possible de surveiller les états des appa
 \section{Régulation}
 Comme mentionné dans le chapitre \ref{subsec:InitRegul}, le contrôleur EPOS4 possède des boucles de régulations internes. Cependant, ces régulateurs
 ne sont pas faits pour réguler un système comme un pendule inverse. En effet, les boucles de régulations de l'EPOS4 fonctionnent en admettant que
-les capteurs se trouvent sur l'axe moteur ou sur un axe entraîné par le moteur. Le maintient en équilibre d'une tige parfaitement libre autour de son
-axe n'est donc pas possible avec ces boucles là.\\
+les capteurs se trouvent sur l'axe moteur ou sur un axe entraîné par le moteur. Le maintien en équilibre d'une tige parfaitement libre autour de son
+axe n'est donc pas possible avec ces boucles-là.\\
 
 La méthode pour réussir à réguler le système est de récupérer les valeurs de position, vitesse et accélération des deux capteurs sur la RaspberryPi
-par communication CANopen. À partir de ces valeurs il faut effectuer le calcul de régulation soit même pour en ressortir une position ou une vitesse
-qui est ensuite envoyé à l'EPOS4 de nouveau par communication CANopen.\\
+par communication CANopen. À partir de ces valeurs il faut effectuer le calcul de régulation soi-même pour en ressortir une position ou une vitesse
+qui est ensuite envoyée à l'EPOS4 de nouveau par communication CANopen.\\
 
 La première méthode de régulation serait de mettre en place 2 boucles de régulations PID, une pour maintenir la tige vers le haut et une autre pour
-maintenir la partie mobile au centre du système. Les deux résultats des boucles serait sommés avec celui du centrage ayant un facteur plus faible
+maintenir la partie mobile au centre du système. Les deux résultats des boucles seraient sommés avec celui du centrage ayant un facteur plus faible
 sur le résultat. Pour pouvoir faire une régulation PID il faut une valeur dérivée et une intégrale ce qui veut dire qu'en connaissant la position,
 la vitesse et l'accélération, la régulation se ferait en vitesse.\\
 
 Une autre méthode de régulation trouvée sur un site appelé logimecatronik \cite{logimecatronik} utilise une seule boucle de régulation avec une
-approximation des petits angles sur la position angulaire. Le boucle obtenue est un régulateur PD avec deux termes proportionnels: un pour l'angle
+approximation des petits angles sur la position angulaire. La boucle obtenue est un régulateur PD avec deux termes proportionnels: un pour l'angle
 de la tige et un autre pour la position linéaire et un terme dérivatif pour la vitesse de déplacement linéaire. Cette manière de faire est moins
 robuste mais donne une régulation en position.\\
 
-Si jamais les objectifs de communiquer avec le contrôleur EPOS et de réussir à bouger le moteur sans problème sont atteint pendant le mois d'août,
-le nouvel objectif sera de faire fonctionner le pendule inverse en mettant en place l'une de ces méthodes de régulation.
+Si jamais les objectifs principaux visant à communiquer avec le contrôleur EPOS et réussir à bouger le moteur sans problème sont atteints pendant
+le mois d'août, le nouvel objectif sera de faire fonctionner le pendule inversé en mettant en place l'une de ces méthodes de régulation.
 
 

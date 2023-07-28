@@ -4,7 +4,7 @@ d'aluminium EN-AW 6082 sauf si mentionné autrement. Les dimensions indiquées s
 
 \section{Assemblage mécanique complet}\label{sec:AssMecComp}
 L'assemblage de toutes les pièces mécaniques fabriquées avec la structure et les composants commandés vu de face et de derrière est
-donné ci-dessous. Cette image permet de donner une idée de où sont placés les pièces qui seront discutées plus loin dans ce chapitre. Une vue
+donné ci-dessous. Cette image permet de donner une idée d'où sont placées les pièces qui seront discutées plus loin dans ce chapitre. Une vue
 éclatée d'une partie du système est aussi disponible dans l'annexe B.
 
 \begin{figure}[H]
@@ -23,7 +23,7 @@ donné ci-dessous. Cette image permet de donner une idée de où sont placés le
 
 \section{Liaison Moteur-Glider}\label{sec:LiaisonMotGlid}
 La liaison entre le chariot du guidage et le \gls{glider} du moteur va se faire en deux pièces vissées ensemble. L'assemblage de ces pièces
-entre elles et avec leur liaisons directes donne la mise en plan suivante.
+entre elles et avec leurs liaisons directes donne la mise en plan suivante.
 
 \begin{figure}[H]
     \centering
@@ -41,12 +41,12 @@ La première pièce, la liaison au chariot, est illustrée sur l'image suivante.
     \label{fig:LiaisonChariot}
 \end{figure}
 
-La liaison au chariot devra accueillir deux roulements qui servent à faire tourner la partie qui tient la tige du pendule. Une tolérance
+La liaison au chariot devra accueillir deux roulements rigides à billes qui servent à faire tourner la partie qui tient la tige du pendule. Une tolérance
 h6 est présente sur le diamètre intérieur pour les roulements en suivant les spécifications des normes \cite{Ajustements}. Une zone pour placer
 un anneau de LEDs est aussi nécessaire afin de pouvoir illuminer la tige. Enfin, cette pièce devra aussi accueillir l'encodeur pour la position
 angulaire. Une fente sur l'arrière est prévue pour le passage de câble des LEDs et de l'encodeur. La fixation sur le chariot se fait avec quatre
 vis M5 ce qui nécessitera donc des lamages sur la face avant. La fixation sur l'autre pièce se fait sur le dessous avec quatre taraudages M5.
-Deux perçages sont présents avec une tolérance H7 pour des goupilles qui permettent l'indexage avec la liaison moteur.\\
+Deux alésages sont présents avec une tolérance H7 pour des goupilles qui permettent l'indexage avec la liaison moteur.\\
 
 La seconde pièce, la liaison moteur, devra évidemment se lier avec la première, mais aussi avec le moteur. Elle est représentée sur l'illustration
 suivante.
@@ -58,7 +58,7 @@ suivante.
     \label{fig:LiaisonMoteur}
 \end{figure}
 
-La première pièce ayant les taraudages, celle-ci aura quatre passage de vis M5 ainsi que deux trous avec la tolérance K7 pour les goupilles d'indexage
+La première pièce ayant les taraudages, celle-ci aura quatre passages de vis M5 ainsi que deux trous avec la tolérance K7 pour les goupilles d'indexage
 sur le dessus.
 Pour la fixation au moteur, quatre lamages M3 placés sur le dessus suffiront. Deux autres éléments viennent encore se fixer sur cette pièce: le support de la tête de
 lecture pour la règle linéaire et la chaîne porte-câbles. Pour le support de tête de lecture, trois taraudages M4 sont placés sur la face avant, alors
@@ -108,7 +108,7 @@ symétriques pour pouvoir les fixer. La représentation d'un des supports se tro
 \end{figure}
 
 \section{Partie tournante}\label{sec:PartieTour}
-La partie tournante du système est composée de plusieurs pièces, dont deux en \acrshort{PC}. L'assemblage de ces différentes pièces ainsi que de
+La partie tournante du système est composée de plusieurs pièces, dont deux en polycarbonate transparent. L'assemblage de ces différentes pièces ainsi que de
 la liaison au chariot et l'encodeur donne la représentation suivante.
 
 \begin{figure}[H]
@@ -129,16 +129,10 @@ La première partie de la pièce, couplage encodeur 1, est illustrée ci-après.
     \label{fig:CouplEnco}
 \end{figure}
 
-La seconde partie, couplage encodeur 2, qui vient se chasser dans le trou central de la première est la suivante. C'est un arbre rectifié de 3~mm de diamètre et 32~mm
+La seconde partie, couplage encodeur 2, qui vient se chasser dans le trou central de la première est un arbre rectifié de 3~mm de diamètre et 32~mm
 de long en acier CK45.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.3\textwidth]{assets/figures/CouplageEncodeur2.svg}
-    \caption{Représentation du couplage à l'encodeur}
-    \label{fig:CouplEnco2}
-\end{figure}
 
-Le couplage encodeur et le couplage à la tige sont imbriquées l'un dans l'autre et il faut donc une tolérance sur le diamètre extérieur du couplage encodeur de h6. Il faut aussi mettre une tolérance
+Le couplage encodeur et le couplage à la tige sont imbriqués l'un dans l'autre et il faut donc une tolérance sur le diamètre extérieur du couplage encodeur de h6. Il faut aussi mettre une tolérance
 sur le diamètre intérieur qui définit la face où s'appuye les roulements donc une tolérance de M7 a été choisie car la bague extérieure du
 roulement est fixe par rapport aux efforts et ceux-ci sont faibles \cite{Ajustements}.
 
@@ -161,7 +155,7 @@ diamètre lui aussi égal à 10~mm et une longueur de 420~mm. Aucune autre modif
 les arêtes coupantes.\\
 
 Les forces qui s'appliquent aux roulements peuvent maintenant être calculées à l'aide du schéma de forces sur la figure \ref{fig:CalcRoul}.
-Les termes utilisés dans ce schéma sont les suivant:
+Les termes utilisés dans ce schéma sont les suivants:
 
 \begin{table}[H]
     \centering
@@ -214,14 +208,14 @@ Somme des forces sur l'axe y pour pièces statiques:
     \end{aligned}
 \end{equation}
 
-La plus grande force radiale trouvée est $F_{R1}$ avec 3.9~N ce qui, comparée à la charge statique de base $C_0$ de 220~N que l'on peut retoruver dans
+La plus grande force radiale trouvée est $F_{R1}$ avec 3.9~N ce qui, comparée à la charge statique de base $C_0$ de 220~N que l'on peut retrouver dans
 l'annexe C, est négligeable (moins de 2\% de la valeur). La valeur est même plus petite que la limite de fatigue du roulement $P_u$ qui vaut 9~N.
 Même avec des accélérations d'environ 3g lors du fonctionnement du système, les forces ne seront que 3 fois plus grandes et donc toujours
 plus faibles que la charge statique de base.\\
 
 Les roulements ne sont pas précontraints pour plusieurs raisons: il n'y a pas de force conséquente sur les roulements, la vitesse de rotation
-est pratiquement nulle en moyenne dû à la nature du mouvement que l'on veut effectuer et la présence d'un jeu sur l'axe de rotation n'est pas
-un problème.
+est pratiquement nulle en moyenne dû à la nature du mouvement que l'on veut effectuer et la présence d'un jeu sur l'axe de rotation n'est que
+peu importante.
 
 \section{Support pour chaîne porte-câbles}\label{sec:SupChainCable}
 La chaîne porte-câbles est fixée d'un côté à la liaison moteur comme précisé plus haut au chapitre \ref{sec:LiaisonMotGlid}. L'autre côté est
@@ -236,9 +230,9 @@ attaché au support pour chaîne porte-câbles qui est lui-même fixé sur un pr
 
 Deux passages de vis M4 sont présents pour la fixation sur le profilé ainsi que deux autres passages de vis M6 pour la fixation de la chaîne.
 Un dégagement de matière est présent afin de pouvoir faire passer les câbles qui sortent de la chaîne et qui continuent plus bas vers le boîtier
-électrique. Cette pièce est fabriquée en tôle pliée de 2~mm d'épaisseur et nécessite un alliage d'aluminium différent, l'aluminium EN-AW 5052.\\
+électrique. Cette pièce est fabriquée en tôle pliée de 2~mm d'épaisseur et utilise un alliage d'aluminium différent, l'aluminium EN-AW 5052.\\
 
-Un problème de soutient de la chaîne porte-câbles est survenu lors de l'assemblage. La description du problème et de la solution à appliquer
+Un problème de soutien de la chaîne porte-câbles est survenu lors de l'assemblage. La description du problème et de la solution à appliquer
 pendant le mois d'août est donnée dans le chapitre \ref{sec:ProbChaine}
 
 \section{Plaque de passage pour moteur}\label{sec:PlaPassMot}
@@ -251,4 +245,25 @@ passent par cet endroit donc il faut découper une zone de passage pour ces piè
     \includegraphics[width = \textwidth]{assets/figures/PlaquePassageMoteur.svg}
     \caption{Représentation de la plaque centrale}
     \label{fig:PLaPassMot}
+\end{figure}
+
+\section{Sécurité}\label{sec:Securite}
+Une première sécurité qui a déjà été mentionnée dans le chapitre \ref{subsec:Amortisseurs} est constituée d'amortisseurs en bout de course pour
+arrêter la partie mobile en cas de dysfonctionnement du pendule. Des arrêts d'urgence sont aussi présents afin d'arrêter manuellement le système
+en cas de problème. Les arrêts d'urgence sont branchés directement sur l'alimentation 230~V du système donc la pression sur l'un d'entre eux coupe
+immédiatement le système. Ceci à pour conséquence d'être néfaste pour l'électronique du système et peut corrompre l'OS de la carte RaspberryPi, il
+faut donc utiliser ces boutons uniquement en cas d'urgence.\\
+
+Une autre couche de sécurité viserait à empêcher les utilisateurs de pouvoir mettre leurs mains à des emplacements qui pourraient les blesser en
+utilisant une plaque. La solution pensée est directement attachée aux supports des amortisseurs et viendrait se placer devant le rail ainsi que
+les amortisseurs pour restreindre l'accès aux zones dangereuses tout en laissant l'accès à la tige pour la déstabiliser. Etant donné que la plaque
+obstrue la vue d'une bonne partie du système, elle doit être faite d'un matériau transparent comme du \acrshort{PMMA}. Cette plaque n'a pas été
+fabriquée pendant ce projet et sa mention n'est présente que comme recommandation pour l'utilisation du système lors de démonstrations publiques.
+La figure suivante est une représentation hypothétique de la plaque et de son utilisation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{assets/figures/Securite.svg}
+    \caption{Représentation des mesures de protections mises en place}
+    \label{fig:Securite}
 \end{figure}

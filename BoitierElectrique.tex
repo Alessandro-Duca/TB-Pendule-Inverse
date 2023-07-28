@@ -1,19 +1,19 @@
 \section{Description des connections}\label{sec:DescConnect}
-L'ensemble des étages d'alimentation et de commande sont placés dans un boîtier électrique qui se branche sur une prise classique 230~V. Ce dernier
+L'ensemble des étages d'alimentation et de commande sont placés dans un boîtier électrique qui se branche sur une prise classique T13 230~V. Ce dernier
 devra alimenter le contrôleur EPOS4 Compact 50/15 de chez Maxon \cite{Maxon} et la carte Raspberry Pi 3B+ \cite{RaspberryPi}. Une tension continue de 48~V
 sera nécessaire pour commander le moteur et une tension continue de 5~V pour alimenter le Raspberry Pi. Pour obtenir ces tensions,
-un convertisseur AC-DC avec 48~V en sortie et un convertisseur DC-DC avec 48~V en entrée et 5~V en sortie seront nécessaire. La fiche 230~V
+un convertisseur AC-DC avec 48~V en sortie et un convertisseur DC-DC avec 48~V en entrée et 5~V en sortie seront nécessaires. La fiche 230~V
 sera une fiche pour appareil C14 avec bouton et fusible intégrés ce qui enlève la nécessité de mettre un disjoncteur et fait gagner de la place. Les deux
 convertisseurs, le contrôleur et la carte de commande sont tous fixés sur un rail DIN35. Il faut donc déterminer les dimensions de ces éléments pour
 déterminer la taille du boîtier et du rail nécessaire.\\
 
 Le contrôleur est aussi connecté à l'encodeur linéaire et angulaire, à l'anneau de LEDs et aux capteurs de fin de course. On peut résumer toutes
-ces connections sur le schéma suivant.
+ces connexions sur le schéma suivant.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.9\textwidth]{assets/figures/SchemaLogique.svg}
-    \caption{Schéma de connections}
+    \caption{Schéma de connexions}
     \label{fig:SchemaConnec}
 \end{figure}
 
@@ -48,7 +48,7 @@ du boîtier se porte sur l'ABS 200/100 HG ENCLOSURE de chez Fibox \cite{Fibox} a
 246~mm de largeur interne. Aussi, on fera le choix de prendre la plaque de montage MIV 200 MOUNTING PLATE et le rail MIV 20 DIN-35 RAIL aussi
 de chez Fibox \cite{Fibox}.\\
 
-Les connections entre les éléments externes et internes au boîtier doivent être faites de manière à ce que l'on puisse déconnecter les éléments
+Les connexions entre les éléments externes et internes au boîtier doivent être faites de manière à ce que l'on puisse déconnecter les éléments
 externes et retirer le boîtier sans avoir à démonter le reste du système. À cette fin, plusieurs connecteurs sont utilisés pour faire l'interface
 entre l'intérieur et l'extérieur du boîtier et, pour les éléments ne possédant que 2 ou 3 fils minces qui ne nécessitent pas un connecteur
 individuel, des presses étoupes sont utilisés comme passage de câbles. Ces câbles là viennent se fixer sur un bornier de 25~mm de large situé
@@ -71,7 +71,7 @@ L'assemblage de ces pièces est illustré ci-dessous.
 
 \section{Branchements}\label{sec:Branche}
 
-À partir du schéma de connection à la figure \ref{fig:SchemaConnec} et des composants choisis dans le tableau \ref{tab:ChoixElem}, un schéma
+À partir du schéma de connexion à la figure \ref{fig:SchemaConnec} et des composants choisis dans le tableau \ref{tab:ChoixElem}, un schéma
 des branchements électrique a été créé pour pouvoir réaliser le boîtier.
 
 \begin{figure}[H]

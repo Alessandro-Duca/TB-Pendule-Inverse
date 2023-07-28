@@ -1,8 +1,8 @@
-Les calculs suivant sont nécessaire à la prise de décision pour les solutions.
+Les calculs suivant sont nécessaires à la prise de décision pour les solutions.
 
 \section{Valeurs utilisées}\label{sec:ValUtil}
-On retrouve dans le tableau suivant les valeurs constantes que l'on connaît au préalable et qui seront utilisées dans les calculs.
-On approxime une valeur d'accélération maximale voulue de 30~$m/s^2$ et une vitesse maximale de 5~m/s pour une course d'environ 1~m.
+Dans le tableau suivant se trouvent les valeurs constantes qui sont connues au préalable et qui seront utilisées dans les calculs.
+La valeur d'accélération maximale voulue de 30~$m/s^2$ et une vitesse maximale de 5~m/s pour une course d'environ 1~m sont approximées.
 Ces valeurs pourront être ajustées si jamais les calculs montrent qu'elles ne sont pas atteignables.
 
 \begin{table}[H]
@@ -18,7 +18,7 @@ Ces valeurs pourront être ajustées si jamais les calculs montrent qu'elles ne 
     \end{tabular}%
 \end{table}
 
-On estime la masse totale qui bouge à l'aide des approximations suivantes en prennant les éléments mentionnés dans le chapitre \ref{sec:PartMob}
+La masse totale qui bouge est estimée à l'aide des approximations suivantes en prennant les éléments mentionnés dans le chapitre \ref{sec:PartMob}
 et représentés dans la figure \ref{fig:StructPrelim}:
 \begin{itemize}
     \item Tige en polycarbonate de 10~mm de diamètre: $\sim$50~g
@@ -29,7 +29,7 @@ et représentés dans la figure \ref{fig:StructPrelim}:
     \item Pièces créées en aluminium: $\sim$250-350~g
 \end{itemize}
 
-On aura donc une masse totale m en mouvement pouvant aller de 770 à 870~g. La valeur maximale sera utilisée pour déterminer la force maximale F
+Il y aura donc une masse totale m en mouvement pouvant aller de 770 à 870~g. La valeur maximale sera utilisée pour déterminer la force maximale F
 que le moteur doit appliquer pour atteindre l'accélération voulue en utilisant la formule suivante:
 
 \begin{equation}\label{eq:ForceMot}
@@ -38,8 +38,9 @@ que le moteur doit appliquer pour atteindre l'accélération voulue en utilisant
 
 Le moteur choisi devra appliquer une force d'au moins 26.1~N pour pouvoir obtenir l'accélération recherchée sur le pendule.\\
 
-On peut aussi vérifier que la course du moteur est suffisante pour atteindre la vitesse maximale du système. On ne peut accélérer que sur la
-moitié de la course, car il faut décélérer sur la deuxième moitié afin d'éviter les impacts. On obtient donc les formules suivantes:
+La course du moteur est aussi vérifiable afin d'être certain qu'elle soit suffisante pour atteindre la vitesse maximale du système. Il n'est possible
+d'accélérer que sur la moitié de la course, car il faut décélérer sur la deuxième moitié afin d'éviter les impacts. Les formules suivantes sont
+obtenues:
 
 \begin{align}\label{eq:TempsMouv}
     \begin{split}
